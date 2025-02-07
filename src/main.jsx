@@ -15,6 +15,7 @@ const store = configureStore();
 
 // Store setup
 if (import.meta.env.MODE !== "production") {
+  console.log("sstest")
   restoreCSRF();
   window.csrfFetch = csrfFetch;
   window.store = store;
