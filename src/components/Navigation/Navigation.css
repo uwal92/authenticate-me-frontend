@@ -1,0 +1,78 @@
+/* frontend/src/components/Navigation/Navigation.css */
+
+.nav-container {
+  background: #1a252f;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  margin: 0 15px;
+}
+
+.nav-links {
+  display: flex;
+  flex-grow: 1;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-list a:hover {
+  color: #f39c12;
+  text-decoration: none;
+}
+
+.nav-button {
+  background: #f39c12;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-button:hover {
+  background: #e67e22;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .auth-buttons {
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
