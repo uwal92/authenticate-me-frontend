@@ -1,5 +1,8 @@
 // frontend/src/store/csrf.js
 import Cookies from "js-cookie";
+const BACKEND_URL =
+  import.meta.env.VITE_BACKEND_URL ||
+  "https://authenticate-me-backend.onrender.com";
 
 export async function csrfFetch(url, options = {}) {
   // set options.method to 'GET' if there is no method
@@ -16,7 +19,7 @@ export async function csrfFetch(url, options = {}) {
     options.headers["XSRF-Token"] = Cookies.get("XSRF-TOKEN");
   }
   // call the default window's fetch with the url and the options passed in
-  const res = await window.fetch(url, options);
+  const res = await window.fetch(`${BACKEND_URL}${url}`, options);
 
   // if the response status code is 400 or above, then throw an error with the
   // error being the response
