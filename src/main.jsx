@@ -14,21 +14,21 @@ import { Modal, ModalProvider } from "./context/Modal";
 const store = configureStore();
 
 // Store setup
-if (import.meta.env.MODE !== "production") {
+// if (import.meta.env.MODE !== "production") {
   console.log("sstest")
   restoreCSRF();
   window.csrfFetch = csrfFetch;
   window.store = store;
   window.sessionActions = sessionActions;
-}
+// }
 
 // frontend/src/main.jsx
 
 // ...
 
-if (process.env.NODE_ENV !== "production") {
+// if (process.env.NODE_ENV !== "production") {
   window.store = store;
-}
+// }
 
 // frontend/src/main.jsx
 
